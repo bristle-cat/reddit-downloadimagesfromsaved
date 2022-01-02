@@ -73,14 +73,15 @@ for item in saved:
             filenameList.append(filename)
             testRequest = requests.get(url)
             print(testRequest.status_code)
-            imgData = requests.get(url).content
-            with open(str(imgDir) + '/' + str(redditor) + '/' + str(subreddit) + '/' + filename, 'wb') as handler:
-                handler.write(imgData)
-            description = item.title
-            descriptionList.append(description)
-            print ('Saved ' + filename)
             if testRequest.status_code == 200:
                 count = count + 1
+                imgData = requests.get(url).content
+                with open(str(imgDir) + '/' + str(redditor) + '/' + str(subreddit) + '/' + filename, 'wb') as handler:
+                    handler.write(imgData)
+                description = item.title
+                descriptionList.append(description)
+                print ('Saved ' + filename)
+            else: continue
 print(str(count) + ' images downloaded.')
 
 # Create a file that gives the description of each image keyed to the image filename
