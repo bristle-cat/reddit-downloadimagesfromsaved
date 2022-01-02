@@ -2,6 +2,8 @@
 	"credentials": {
 		"client_id":"your client_id goes here",
 		"client_secret":"your client_secret goes here",
-		"user_agent":"your user agent goes here"
+		"user_agent":"your user agent goes here",
+		"username": "your username goes here",
+		"password": "your password goes here"
 		}
 }
