@@ -37,7 +37,7 @@ credinfo = json.loads(creddata)
 reddit = praw.Reddit(
     client_id=credinfo['credentials']['client_id'],
     client_secret=credinfo['credentials']['client_secret'],
-    user_agent=credinfo['credentials']['client_secret'],
+    user_agent=credinfo['credentials']['user_agent'],
     username=credinfo['credentials']['username'],
     password=credinfo['credentials']['password'],
 )
